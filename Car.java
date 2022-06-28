@@ -76,8 +76,10 @@ double gasRemaining;
     public void refuel(double gasAmount) {
         // Add gasAmount of gas to the gas tank
       if((this.gasRemaining + gasAmount) > this.tankCapacity) {
-        System.out.println("You have overfilled the gas tank and gas is likely puddling around your car.");
-        this.gasRemaining = this.tankCapacity;
+        //System.out.println("You have overfilled the gas tank and gas is likely puddling around your car.");
+        //this.gasRemaining = this.tankCapacity;
+        this.gasRemaining += gasAmount;
+        System.out.println("Added " + gasAmount + " gallons to the tank.");
       } else if(gasAmount < 0) {
         System.out.println("If you wanted to remove gas from the tank, you should have used the drive method.");
       } else {
